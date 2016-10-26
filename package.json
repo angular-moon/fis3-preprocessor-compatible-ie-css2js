@@ -1,26 +1,27 @@
 {
-  "name": "fis3-preprocessor-css2js",
-  "version": "0.1.0",
-  "description": "resouce loader",
+  "name": "fis3-preprocessor-compatible-ie-css2js",
+  "version": "1.0.0",
+  "description": "fis plugin css2js,兼容ie",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fex-team/fis3-preprocessor-css2js.git"
+    "url": "git+https://github.com/angular-moon/fis3-preprocessor-compatible-ie-css2js.git"
   },
   "keywords": [
-    "fis3",
-    "loader"
+    "fis",
+    "css2js"
   ],
-  "author": "fis",
+  "author": "angular-moon",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/fex-team/fis3-preprocessor-css2js/issues"
+    "url": "https://github.com/angular-moon/fis3-preprocessor-compatible-ie-css2js/issues"
   },
-  "homepage": "https://github.com/fex-team/fis3-preprocessor-css2js",
+  "homepage": "https://github.com/angular-moon/fis3-preprocessor-compatible-ie-css2js#readme",
   "dependencies": {
+    "object-assign": "^4.0.1",
     "tinytim": "^0.1.1"
   }
 }

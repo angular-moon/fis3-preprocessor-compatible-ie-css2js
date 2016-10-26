@@ -1,11 +1,11 @@
-fis3-preprocessor-css2js
+fis3-preprocessor-compatible-ie-css2js
 ===============
 将 css 解析成 js 文件，用 js 的方式去加载。
 
 只支持 fis3
 
 ```
-npm install -g fis3-preprocessor-css2js
+npm install -g fis3-preprocessor-compatible-ie-css2js
 ```
 
 使用方式配置如下：
