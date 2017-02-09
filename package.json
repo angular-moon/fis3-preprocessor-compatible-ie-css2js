@@ -1,6 +1,6 @@
 {
   "name": "fis3-preprocessor-compatible-ie-css2js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "fis plugin css2js,兼容ie",
   "main": "index.js",
   "scripts": {
