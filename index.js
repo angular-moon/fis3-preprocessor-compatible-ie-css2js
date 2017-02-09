@@ -28,13 +28,20 @@ module.exports = function(content, file, conf) {
 /*
 合并style
 从后往前查找可以合并的styleSheet(style 或 link)
-每一个style 或 link 样式规则最多只能有4095个
+每一个style 或 link 样式规则最多只能有4095个, 
+css规则的解析是匹配的{}数量, 可能不准确, 上限设置为3900
 排除包含有@import style,避免和requirejs css plugin冲突
 */
 var mergeStyle = function(css){
-    var rulesLength = css.match(/\{[^{}]*\}/g).length;
+    var rulesLength = css.match(/\{[^{}]*\}/g).length, styleSheet;
     for(var i=document.styleSheets.length-1;i>=0;--i){
-        if((document.styleSheets[i].rules.length + rulesLength) <= 4095 && document.styleSheets[i].cssText.indexOf('@import') === -1){
+      styleSheet = document.styleSheets[i];
+        if((styleSheet.rules.length + rulesLength) <= 3900 
+          && styleSheet.cssText.indexOf('@import') === -1
+          && !styleSheet.disabled
+          && !styleSheet.readOnly
+          && (!styleSheet.media || styleSheet.media.length === 0)
+          ){
             document.styleSheets[i].cssText += css;
             return true;
         }
