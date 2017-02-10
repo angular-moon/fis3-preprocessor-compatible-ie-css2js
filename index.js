@@ -34,7 +34,7 @@ css规则的解析是匹配的{}数量, 可能不准确, 上限设置为3900
 */
 var mergeStyle = function(css){
     var rulesLength = css.match(/\{[^{}]*\}/g).length, styleSheet;
-    for(var i=document.styleSheets.length-1;i>=0;--i){
+    for(var i=0;i<document.styleSheets.length;++i){
       styleSheet = document.styleSheets[i];
         if((styleSheet.rules.length + rulesLength) <= 3900 
           && styleSheet.cssText.indexOf('@import') === -1
